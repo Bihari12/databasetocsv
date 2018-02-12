@@ -1,21 +1,3 @@
-<?php
-session_start();
-
-
-	if(isset($_SESSION['dbdetails']) && $_SESSION['dbdetails'] =='set')
-	{
-		// db details arre set
-	}
-	else
-	{
-	         // redirecting to options.php if db details are not set
-		 header('Location : options.php');
-		 exit();
-	}
-
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>

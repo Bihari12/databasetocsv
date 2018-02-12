@@ -3,6 +3,17 @@ ob_start();
 session_start();
 error_reporting(0);
 
+if(isset($_SESSION['dbdetails']) && $_SESSION['dbdetails'] =='set')
+{
+
+}
+else
+{
+header('Location: options.php');
+exit();
+}
+
+
 include("db_config.php");
 $con = mysql_connect($hostname, $username, $password );
 
@@ -22,15 +33,7 @@ if(!$res) {
 
 
 
-  if(isset($_SESSION['dbdetails']) && $_SESSION['dbdetails'] =='set')
-  {
 
-  }
-  else
-  {
-    header('Location: options.php');
-    exit();
-  }
 
 
 
